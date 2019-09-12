@@ -10,5 +10,4 @@ interesting
 difficult
 problem
 hell
-help
-whatever
+checking
