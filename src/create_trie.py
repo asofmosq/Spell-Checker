@@ -32,7 +32,25 @@ def insert(root, word):
     node.valid_end_of_word = True
 
 
+def search(root, word):
+    node = root
+    for char in word:
+        # Check if node's children contains char
+        char_found = False
+        for child in node.children:
+            if child.value == char:
 
+                # If node's children contains this character want to keep traversing down this child
+                char_found = True
+                node = child
+                break
+
+        # Char wasn't found, terminate search
+        if not char_found:
+            return False
+
+    # End of word has been reached, check if it's a valid end of word
+    return node.valid_end_of_word
 
 
 
